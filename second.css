@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1000px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.left-section {
+    flex: 1;
+    background: linear-gradient(135deg, #6C1DD3, #410E8A);
+    color: white;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* text-align: center; */
+    height: 100%;
+    border-radius: 0 300px 300px 0;
+    margin-left: 50px;
+
+}
+
+.left-section img {
+    width: 100%;
+    max-width: 300px;
+}
+
+
+.right-section {
+    flex: 1;
+    padding: 50px;
+}
+
+.right-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+
+.login-text {
+    /* text-align: center; */
+    margin-top: 10px;
+}
+
+.login-text a {
+    color: #4B0082;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.divider {
+    text-align: center;
+    margin: 15px 0;
+    position: relative;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 1px;
+    background: #ccc;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-buttons button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    border: 1px solid #000000;
+    background: white;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    background: rgb(255, 231, 231);
+}
+
+.social-buttons img {
+    width: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .left-section {
+        padding: 30px;
+    }
+
+    .right-section {
+        padding: 30px;
+    }
+}
+
+.form-group-row {
+    display: flex;
+    gap: 15px;  /* Space between the fields */
+    width: 100%;
+}
+
+/* Ensure both input fields share equal width */
+.form-group-row .form-group {
+    flex: 1;
+}
+
+/* Adjust input field width */
+.form__input {
+    width: 100%; /* Makes both inputs take full width of their container */
+    height: 2.5rem;
+    padding: 0 1.25rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    transition: all 250ms;
+    font-size: 16px;
+    background: transparent;
+    background: rgb(255, 231, 231);
+}
+
+/* Fixes label positioning */
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form__input:focus {
+    outline: none;
+    border-top-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Placeholder disappears when input has text */
+.form__input:focus + .form__label, 
+.form__input:not(:placeholder-shown) + .form__label {
+    transform: translateY(-2rem) scale(1);
+    color: black;
+    font-size: 0.85rem;
+}
+
+/* Hide the placeholder */
+.form__input::placeholder {
+    color: transparent;
+    user-select: none;
+}
+
+/* Label styling */
+.form__label {
+    position: absolute;
+    left: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: grey;
+    transition: all 300ms ease-in-out;
+    pointer-events: none;
+}
+
+.signup-btn {
+    width: 100%;
+    background-color: #4B0082;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.signup-btn:hover {
+    background-color: #32006B;
+}
