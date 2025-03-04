@@ -73,22 +73,53 @@
 
 
 .info{
-    height: 150vh;
+    height: 100vh;
     width: 100%;
     background-color: #1ab9f0;
     color: #fff;
-            padding: 40px;
+            padding: 20px;
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
+            justify-content: center;
+            align-items: center;
             flex-wrap: wrap;
 }
 
-.row{
-    margin: 20px;
+.row {
     display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    padding: 20px;
+    margin-bottom: 0;
 }
 
+.col {
+    display: flex;
+    align-items: center; 
+    margin: 5px;
+    text-align: left;
+}
+
+
+.col img {
+    margin-right: 20px;
+    margin-bottom: 90px;
+}
+
+
+.content {
+    max-width: 300px; 
+}
+
+.content h3{
+    color: #4b18d7;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.content p{
+    font-size: 15px;
+}
 
 .foot {
     height: auto;
